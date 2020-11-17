@@ -3,8 +3,8 @@
 #include "../util.h"
 #include "cputemp.h"
 
-#define ICON0                           COL1 "" COL0
-#define ICON1                           COL2 "" COL0
+#define ICON0                           COL1 "" COL0
+#define ICON1                           COL2 "" COL0
 
 #define WARNCPUTEMP                     70000
 
@@ -20,9 +20,9 @@ cputempu(char *str, int sigval)
                 return;
         }
         if (temp < WARNCPUTEMP)
-                snprintf(str, CMDLENGTH, ICON0 "%d°C", temp / 1000);
+                snprintf(str, CMDLENGTH, ICON0 " %d°C", temp / 1000);
         else
-                snprintf(str, CMDLENGTH, ICON1 "%d°C", temp / 1000);
+                snprintf(str, CMDLENGTH, ICON1 " %d°C", temp / 1000);
 }
 
 void

@@ -3,8 +3,8 @@
 #include "../util.h"
 #include "volume.h"
 
-#define ICON0                           COL1 "" COL0
-#define ICON1                           COL1 "" COL0
+#define ICON0                           COL1 "" COL0
+#define ICON1                           COL1 "" COL0
 
 #define BUFLENGTH                       10
 
@@ -21,9 +21,9 @@ volumeu(char *str, int sigval)
 
         buf[getcmdout(PAMIXER, buf, BUFLENGTH) - 1] = '\0';
         if (buf[0] == 'f') /* output was `false <volume>' */
-                snprintf(str, CMDLENGTH, ICON0 "%s%%", buf + 6);
+                snprintf(str, CMDLENGTH, ICON0 " %s%%", buf + 6);
         else /* output was `true <volume>' */
-                snprintf(str, CMDLENGTH, ICON1 "%s%%", buf + 5);
+                snprintf(str, CMDLENGTH, ICON1 " %s%%", buf + 5);
 }
 
 void

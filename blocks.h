@@ -19,18 +19,9 @@
 
 static Block blocks[] = {
 /*      funcu                   funcc                   interval        signal */
-        { hotspotu,             hotspotc,               -1,             4 },
-
         { calendaru,            calendarc,              1,              1 },
-
-        { mailu,                mailc,                  300,            3 },
-
         { volumeu,              volumec,                0,              2 },
-
         { cputempu,             cputempc,               2,              6 },
-
-        { batteryu,             batteryc,               10,             5 },
-
         { NULL } /* just to mark the end of the array */
 };
 
