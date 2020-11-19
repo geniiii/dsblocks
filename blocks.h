@@ -1,4 +1,4 @@
-#define SLEEPINTERVAL                   1
+#define SLEEPINTERVAL 1
 
 #include "blocks/calendar.h"
 #include "blocks/volume.h"
@@ -16,12 +16,14 @@
  * funcc - function responsible for handling clicks on the block */
 
 static Block blocks[] = {
-/*      funcu                   funcc                   interval        signal */
-        { calendaru,            calendarc,              1,              1 },
-        { volumeu,              volumec,                0,              2 },
-        { cputempu,             cputempc,               2,              3 },
-		{ keyboardu,			keyboardc,				1,				4 },
-        { NULL } /* just to mark the end of the array */
+	/* clang-format off */
+	/*      funcu                   funcc                   interval        signal */
+	{		calendaru,				calendarc,				1,				1 },
+	{		volumeu,				volumec,				0,				2 },
+	{		cputempu,				cputempc,				2,				3 },
+	{		keyboardu,				keyboardc,				1,				4 },
+	{ NULL } /* just to mark the end of the array */
+	/* clang-format on */
 };
 
-static const char *delim =  "   ";
+static const char* delim = "   ";

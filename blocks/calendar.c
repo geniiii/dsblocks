@@ -3,21 +3,18 @@
 #include "../util.h"
 #include "calendar.h"
 
-#define ICON                    COL1 "" COL0
+#define ICON COL1 "" COL0
 
-#define SHOWCALCURSE            (char *[]){ "/usr/bin/xsetroot", "-name", "z:tscr i 4", NULL }
+#define SHOWCALCURSE \
+	(char*[]) { "/usr/bin/xsetroot", "-name", "z:tscr i 4", NULL }
 
-void
-calendaru(char *str, int sigval)
-{
-        time_t t = time(NULL);
-        struct tm tm = *localtime(&t);
+void calendaru(char* str, int sigval) {
+	time_t	  t	 = time(NULL);
+	struct tm tm = *localtime(&t);
 
-        strftime(str, CMDLENGTH, ICON " %a, %b %d, %R", &tm);
+	strftime(str, CMDLENGTH, ICON " %a, %b %d, %R", &tm);
 }
 
-void
-calendarc(int button)
-{
-        cspawn(SHOWCALCURSE);
+void calendarc(int button) {
+	cspawn(SHOWCALCURSE);
 }
