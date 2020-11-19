@@ -5,7 +5,7 @@ CC := gcc
 CFLAGS := -O3 -Wall -Wextra
 
 X11CFLAGS := $(shell pkg-config --cflags x11)
-X11LIBS := $(shell pkg-config --libs x11)
+X11LIBS := $(shell pkg-config --libs x11 xkbfile)
 
 BLOCKS := $(wildcard blocks/*.c)
 
